@@ -1,0 +1,9 @@
+{
+  "name": "xingji-public-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "星寄云端入口部署包",
+  "scripts": {
+    "start": "python3 -m http.server 8000"
+  }
+}

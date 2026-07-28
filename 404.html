@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>星寄｜云端入口</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      color: #25243a;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(141, 92, 246, 0.16), transparent 32%),
+        radial-gradient(circle at 86% 12%, rgba(255, 159, 207, 0.20), transparent 30%),
+        linear-gradient(135deg, #f8f6ff 0%, #eef0ff 52%, #fff7fb 100%);
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .side {
+      padding: 30px 24px;
+      color: white;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), transparent),
+        linear-gradient(160deg, #17172a, #342463 72%, #5f3ed2);
+      box-shadow: 18px 0 50px rgba(47, 37, 89, 0.16);
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      color: #5f3ed2;
+      background: white;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .brand h1 {
+      margin: 0;
+      letter-spacing: 0.08em;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    .nav {
+      display: grid;
+      gap: 10px;
+    }
+
+    .nav span {
+      display: block;
+      padding: 13px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .main {
+      padding: 46px;
+    }
+
+    .card {
+      max-width: 820px;
+      padding: 34px;
+      border: 1px solid rgba(141, 92, 246, 0.14);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: 0 24px 70px rgba(55, 38, 100, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      color: #5f3ed2;
+      font-size: 32px;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      color: #6f6a86;
+      line-height: 1.85;
+    }
+
+    .hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #5f3ed2;
+      background: #f1ebff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .side {
+        min-height: 240px;
+      }
+
+      .main {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">
+        <div class="logo">星</div>
+        <div>
+          <h1>星寄</h1>
+          <p>WorkBuddy 风格云端入口</p>
+        </div>
+      </div>
+      <div class="nav">
+        <span>明星人物库</span>
+        <span>行程日志</span>
+        <span>日记提醒 & AI 问答</span>
+        <span>配色模板库</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="card">
+        <span class="hint">星寄会自动唤起</span>
+        <h2>打开这个入口，星寄悬浮球工作台会自动弹出</h2>
+        <p>这个页面可以部署到任意静态服务器、GitHub Pages、Vercel、Netlify 或你自己的服务器。部署后，你会得到一个固定链接；下次在浏览器、豆包、DeepSeek 或其他能打开网页的地方访问这个链接，星寄就会自动加载。</p>
+        <p>数据会保存在这个固定链接所属域名下的浏览器本地存储中。只要你用同一个浏览器访问同一个链接，星寄会恢复你上次离开前的人物、日记、提醒、主题和 AI 对话记录。</p>
+      </section>
+    </main>
+  </div>
+
+  <script defer src="./xingji-widget.js"></script>
+</body>
+</html>
